@@ -14,6 +14,10 @@ const launche = {
 launches.set(launche.flightNumber, launche);
 // console.log(launches);
 
+function getAllLaunches() {
+  return Array.from(launches.values());
+}
+
 module.exports = {
-  launches,
+  getAllLaunches,
 };

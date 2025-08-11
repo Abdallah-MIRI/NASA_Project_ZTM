@@ -19,6 +19,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 app.use(planetsRouter);
 app.use(launchesRouter);
+
+// ✅ Route handler for client-side routing (e.g., React Router)
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
