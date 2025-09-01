@@ -21,7 +21,7 @@ app.use("/planets", planetsRouter);
 app.use("/launches", launchesRouter);
 
 // ✅ Route handler for client-side routing (e.g., React Router)
-app.get("/*", (req, res) => {
+app.get("/{*any}", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
