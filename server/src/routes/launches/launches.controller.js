@@ -3,7 +3,6 @@ const {
   schedulNewLaunch,
   existsLaunchWithId,
   abortLaunchById,
-  saveLanche,
 } = require("../../models/launches.model");
 
 async function httpGetLaunches(req, res) {

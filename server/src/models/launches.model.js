@@ -58,7 +58,7 @@ async function loadLaunchData() {
       customers: customers,
     };
 
-    console.log(`${launch.flightNumber} - ${launch.mission}`);
+    console.log(`${launch.flightNumber} ${launch.mission}`);
   }
 
   return;
