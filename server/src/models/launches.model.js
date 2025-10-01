@@ -96,7 +96,9 @@ async function getAllLaunches() {
       _id: 0,
       __v: 0,
     }
-  );
+  )
+    .skip(10)
+    .limit(50);
 }
 
 async function saveLanche(launch) {
