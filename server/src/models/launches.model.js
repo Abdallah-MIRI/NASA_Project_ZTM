@@ -88,7 +88,7 @@ async function getLatestFlightNumber() {
   return latestLaunch.flightNumber;
 }
 
-async function getAllLaunches() {
+async function getAllLaunches(skip, limit) {
   // return Array.from(launches.values());
   return await LauncheDatabase.find(
     {},
@@ -97,8 +97,8 @@ async function getAllLaunches() {
       __v: 0,
     }
   )
-    .skip(10)
-    .limit(50);
+    .skip(skip)
+    .limit(limit);
 }
 
 async function saveLanche(launch) {
